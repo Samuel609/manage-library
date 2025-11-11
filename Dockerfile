@@ -2,7 +2,7 @@ FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
     libicu-dev \
-    && docker-php-ext-install intl pdo pdo_mysql
+    && docker-php-ext-install intl pdo pdo_mysql mysqli
 
 RUN a2enmod rewrite
 
